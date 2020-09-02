@@ -248,8 +248,8 @@ body {
 
 @media screen and (min-width: 500px) {
   .attribution {
+    position: fixed;
     display: block;
-    position: absolute;
     bottom: 0;
     text-align: center;
     width: 100vw;
