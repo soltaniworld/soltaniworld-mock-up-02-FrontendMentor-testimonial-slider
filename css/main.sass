@@ -2,7 +2,7 @@
 // Background images
 $slide-bg: "../images/pattern-curve.svg"
 $media-bg: "../images/pattern-bg.svg"
-$quote-bg: "../images/pattern-quotes.svg"
+$content-bg: "../images/pattern-quotes.svg"
 // Assets
 $arrow-left: "../images/icon-prev.svg"
 $arrow-right: "../images/icon-next.svg"
@@ -15,15 +15,24 @@ $minDesktop: 500px
 // || TYPOGRAPHY
 body, p
     font-family: 'Inter', sans-serif
+    color: $DarkBlue
 
 // || SPACING
 *
     margin: 0
     padding: 0
 body
-    display: flex
     width: 100vw
-    height: 100vh
+    min-height: 600px
+    @media screen and ( min-width: $minDesktop )
+        display: flex
+        justify-content: center
+        align-items: center
+        min-width: 1440px
+        width: 100vw
+        min-height: 800px
+        height: 100vh
+
 
 // || container
 .container
@@ -39,6 +48,8 @@ body
         background-position: left bottom
         background-size: 285px
     @media screen and ( min-width:  $minDesktop)
+        width: 1440px
+        height: 800px
         &--bg
             background-size: 610px
 
@@ -48,7 +59,6 @@ body
     position: relative
     width: 327px
     height: 308px
-    border: 1px solid #000
     margin-top: 24px
     display: flex
     justify-content: center
@@ -63,8 +73,10 @@ body
         // height: 254px
         // bottom: 24px
         // left: 36px
-        border: 1px solid #000
     @media screen and ( min-width:  $minDesktop)
+        position: absolute
+        top: 50px
+        right: 73px
         width: 697px
         height: 657px
         &-img
@@ -86,18 +98,25 @@ body
     background: #fff
     bottom: 4.5px
     left: 124px
-    &__arrow
-        background-repeat: no-repeat
-        background-size: contain
-        width: 7.143%
-        // width: 100%
+    overflow: hidden
+    &__btn
+        // background-color: red
+        width: 100%
         height: 100%
-        // background: red
-        margin: 0 35.714%
+        display: flex
+        justify-content: center
+        align-content: center
+        background-repeat: no-repeat
+        background-size: 28% auto
+        background-position: center center
+        height: 100%
+        width: 100%
         &--left
             background-image: url($arrow-left)
         &--right
             background-image: url($arrow-right)
+        &:active
+            background-color: rgba(16, 115, 230, 0.3)
     @media screen and ( min-width: $minDesktop )
         width: 112px
         height: 56px
@@ -106,19 +125,29 @@ body
         
 // || CONTENT, QUOTE, CONTACT
 .content
-    width: calc(100% - 64px)
+    width: 311px
     margin: 32px
-    border: 1px solid #000
     text-align: center
+    &--bg
+        background-image: url($content-bg)
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: 60px auto
     &__quote
         margin-bottom: 19px
         font-size: 18px
         line-height: 24px
         font-weight: 300
     @media screen and ( min-width: $minDesktop )
+        position: absolute
+        top: 214px
+        left: 165px
         width: 635px
         height: 354px
         text-align: left
+        &--bg
+            background-position: top left 95px
+            background-size: 120px auto
         &__quote
             margin-top: 66px
             margin-bottom: 32px
@@ -134,17 +163,28 @@ body
         font-weight: 700
     &__title
         font-weight: 500
+        color: $GrayishBlue
     @media screen and ( min-width: $minDesktop )
         flex-direction: row
         font-size: 20px
         line-height: 38px
+        &__name
+            margin-right: 10px
 .attribution
     display: none
     font-size: 11px
     text-align: center
     a
         color: hsl(228, 45%, 44%)
-
+    @media screen and ( min-width: $minDesktop  )
+        display: block
+        position: absolute
+        bottom: 0
+        text-align: center
+        width: 100vw
+        height: 20px
+        background: $GrayishBlue
+        font-size: 1.0em
 .slide-2
     display: none
 .slide-1
