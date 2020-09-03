@@ -172,7 +172,7 @@ body {
 .slides--content {
   position: absolute;
   width: 311px;
-  border: 1px solid pink;
+  margin-top: 32px;
 }
 
 @media screen and (min-width: 500px) {
@@ -196,7 +196,6 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 60px auto;
-  background: #333333aa;
 }
 
 .content__quote {

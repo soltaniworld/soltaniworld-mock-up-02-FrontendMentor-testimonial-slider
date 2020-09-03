@@ -8,9 +8,11 @@ let slideLength = findSlideLength(slides);
 let slideShowTime = 5000
 let playInterval
 
+//show first slide, and start autoPlay of slides
 showSlide(slideIndex);
 autoPlay();
 
+//on clicking button, change slide, and reset autoPlay Interval Timer
 btnNext.addEventListener('click', ()=>{
   clearInterval(playInterval);
   autoPlay();
@@ -24,7 +26,7 @@ btnPrev.addEventListener('click', ()=>{
   showSlide(slideIndex);
 });
 
-
+//Keep slide index within range from 1 to Lenght of slides
 function changeSlideIndex(i){
   slideIndex += i
   if (slideIndex > slideLength ){
@@ -34,6 +36,8 @@ function changeSlideIndex(i){
     slideIndex = 1;
   }
 }
+
+// Change classes on active/inactive slides to show/hide them
 function showSlide(i){
   slides.forEach((slide)=>{
     if (slide.classList.contains(`slide-${i}`)){
@@ -47,7 +51,7 @@ function showSlide(i){
 });
 }
 
-//find number of slides available
+//find number of slides available by surveying elements with class starting with "slide-" as a string
 function findSlideLength(slides){
   let length = 0
   slides.forEach((slide)=>{
