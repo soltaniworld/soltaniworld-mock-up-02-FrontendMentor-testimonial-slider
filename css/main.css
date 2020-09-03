@@ -10,7 +10,7 @@ body, p {
 
 body {
   width: 100vw;
-  min-height: 600px;
+  height: 640px;
 }
 
 @media screen and (min-width: 500px) {
@@ -51,7 +51,7 @@ body {
   background-image: url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-size: 285px;
+  background-size: 285px 72px;
 }
 
 @media screen and (min-width: 500px) {
@@ -89,6 +89,8 @@ body {
 .media-img {
   position: absolute;
   width: 254px;
+  -webkit-box-shadow: 0px 30px 30px -30px #333333cc;
+          box-shadow: 0px 30px 30px -30px #333333cc;
 }
 
 @media screen and (min-width: 500px) {
@@ -133,8 +135,8 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   background-repeat: no-repeat;
-  background-size: 28% auto;
-  background-position: center center;
+  background-size: 28% 45%;
+  background-position: bottom 50% center;
   height: 100%;
   width: 100%;
 }
@@ -158,6 +160,10 @@ body {
     bottom: 26px;
     left: 127px;
   }
+}
+
+.slide-2 {
+  display: none;
 }
 
 .content {
@@ -259,7 +265,19 @@ body {
   }
 }
 
-.slide-2 {
+.ease-out {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.ease-in {
+  opacity: 1;
+  -webkit-transition: opasity 1s;
+  transition: opasity 1s;
+}
+
+.hide {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
