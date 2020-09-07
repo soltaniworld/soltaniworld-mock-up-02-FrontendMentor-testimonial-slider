@@ -93,7 +93,7 @@ body {
   width: 254px;
   -webkit-box-shadow: 0px 30px 30px -30px #333333cc;
           box-shadow: 0px 30px 30px -30px #333333cc;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 500px) {
@@ -138,7 +138,7 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   background-repeat: no-repeat;
-  background-size: 28% 45%;
+  background-size: 25% 35%;
   background-position: bottom 50% center;
   height: 100%;
   width: 100%;
